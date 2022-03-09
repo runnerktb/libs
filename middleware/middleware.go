@@ -10,20 +10,20 @@ import (
 	"net/http"
 )
 
-func Protected(module, serviceID, controller string) gin.HandlerFunc {
+func Guard(module, serviceID string) gin.HandlerFunc {
 	return func(ctx *gin.Context) {
 		// get id from dictionary
 		acc := universe.ParseModule(module)
 		if acc.ID == "" {
 			serr := fmt.Sprintf("module %s not found", module)
-			Response(http.StatusForbidden, serr, "", serviceID, controller, acc.Action, "", ctx)
+			Response(http.StatusForbidden, serr, "", serviceID, module, acc.Action, "", ctx)
 			ctx.Abort()
 			return
 		}
 		tok, err := token.ClaimToken(ctx.Request.Header["Authorization"])
 		if err != nil {
 			serr := serror.NewFromError(err)
-			Response(http.StatusForbidden, serr.Error(), "", serviceID, controller, acc.Action, "", ctx)
+			Response(http.StatusForbidden, serr.Error(), "", serviceID, module, acc.Action, "", ctx)
 			ctx.Abort()
 			return
 		}
@@ -34,7 +34,7 @@ func Protected(module, serviceID, controller string) gin.HandlerFunc {
 		}
 		if !helper.CheckArrayString(module, tok.UserAccess) {
 			serr := serror.New("Token module denied")
-			Response(http.StatusForbidden, serr.Error(), "", serviceID, controller, acc.Action, "", ctx)
+			Response(http.StatusForbidden, serr.Error(), "", serviceID, module, acc.Action, "", ctx)
 			ctx.Abort()
 			return
 		}

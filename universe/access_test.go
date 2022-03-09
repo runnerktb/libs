@@ -19,6 +19,16 @@ func TestParse(t *testing.T) {
 			args{"delete_vehicle_group"},
 			Access{"ByXZ80FF", "delete"},
 		},
+		{
+			"#01",
+			args{"add_notif_promo"},
+			Access{"jok066hI", "add"},
+		},
+		{
+			"#02",
+			args{"list_vehicle_category"},
+			Access{"UzdAmXKQ", "list"},
+		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
