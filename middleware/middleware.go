@@ -32,7 +32,7 @@ func Guard(module, serviceID string) gin.HandlerFunc {
 			ctx.Next()
 			return
 		}
-		if !helper.CheckArrayString(module, tok.UserAccess) {
+		if !helper.CheckArrayString(acc.ID, tok.UserAccess) {
 			serr := serror.New("Token module denied")
 			Response(http.StatusForbidden, serr.Error(), "", serviceID, module, acc.Action, "", ctx)
 			ctx.Abort()
