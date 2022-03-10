@@ -37,14 +37,18 @@ func ClaimToken(tokens []string) (response AuthorizationInfo, serr serror.SError
 		tmpUserAccess = append(tmpUserAccess, v.(string))
 	}
 	isOrgAdmin := int(helper.StringToInt(helper.IntToString(int(resToken["isorgadmin"].(float64))), 0))
+	isActive := int(helper.StringToInt(helper.IntToString(int(resToken["isactive"].(float64))), 0))
 	response = AuthorizationInfo{
-		UserID:     fmt.Sprintf("%v", resToken["user_id"]),
-		Username:   fmt.Sprintf("%v", resToken["username"]),
-		IsOrgAdmin: &isOrgAdmin,
-		//IsActive:       int(helper.StringToInt(helper.IntToString(int(resToken["isactive"].(float64))), 0)),
+		UserID:         fmt.Sprintf("%v", resToken["user_id"]),
+		Username:       fmt.Sprintf("%v", resToken["username"]),
+		IsOrgAdmin:     &isOrgAdmin,
+		IsActive:       isActive,
 		OrganizationId: fmt.Sprintf("%v", resToken["organization_id"]),
-		AppId:          fmt.Sprintf("%v", resToken["app"]),
+		App:            fmt.Sprintf("%v", resToken["app"]),
+		Email:          fmt.Sprintf("%v", resToken["email"]),
 		Exp:            int(helper.StringToInt(helper.IntToString(int(resToken["exp"].(float64))), 0)),
+		Name:           fmt.Sprintf("%v", resToken["name"]),
+		RealmID:        fmt.Sprintf("%v", resToken["realm_id"]),
 		UserAccess:     tmpUserAccess,
 	}
 
