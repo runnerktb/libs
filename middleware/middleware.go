@@ -28,8 +28,9 @@ func Guard(module, serviceID string) gin.HandlerFunc {
 			return
 		}
 
-		// set token
 		ctx.Set("x-token", tok)
+		ctx.Set("x-module", module)
+		ctx.Set("x-app-id", tok.App)
 
 		// handle tti super
 		if tok.IsOrgAdmin != nil && *tok.IsOrgAdmin == 0 {
