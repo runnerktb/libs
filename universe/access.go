@@ -9,6 +9,7 @@ var (
 		"_anomaly",
 		"_apps",
 		"_checkpoint",
+		"_customer",
 		"_device",
 		"_device_activation",
 		"_fuel",
@@ -16,6 +17,7 @@ var (
 		"_geo_group",
 		"_geocode",
 		"_geofence",
+		"_job_management",
 		"_notif_abnormal",
 		"_notif_anomaly",
 		"_notif_disclaimer",
@@ -58,8 +60,8 @@ var (
 )
 
 type Access struct {
-	ID string
-	Action  string
+	ID     string
+	Action string
 }
 
 func ParseModule(module string) (res Access) {
