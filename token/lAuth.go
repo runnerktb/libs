@@ -1,9 +1,10 @@
 package token
 
 const (
-	Root = iota
-	Admin
-	User
+	Root  = iota // no realm
+	Super        // tti or ktb
+	Admin        // org admin
+	User         // org user
 )
 
 type AuthorizationInfo struct {
@@ -22,6 +23,10 @@ type AuthorizationInfo struct {
 
 func (a *AuthorizationInfo) IsRoot() bool {
 	return a.IsOrgAdmin != nil && *a.IsOrgAdmin == Root
+}
+
+func (a *AuthorizationInfo) IsSuper() bool {
+	return a.IsOrgAdmin != nil && *a.IsOrgAdmin == Super
 }
 
 func (a *AuthorizationInfo) IsAdmin() bool {
