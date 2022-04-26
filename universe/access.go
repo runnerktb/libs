@@ -56,6 +56,9 @@ var (
 		"_vehicle_starter",
 		"_vehicle_status",
 		"_vehicle_type",
+		"_sparepart",
+		"_group_sparepart",
+		"_subgroup_sparepart",
 	}
 )
 
