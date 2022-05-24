@@ -208,5 +208,15 @@
   "view_avg_usia_retail_sales": "MNCWtKNJ",
   "list_operational_user_org": "ykexSJu8",
   "add_edit_operational_user_org": "kgV60Q61",
-  "view_service_cost_retail_sales": "MTi2R22c"
+  "view_service_cost_retail_sales": "MTi2R22c",
+  "edit_maintenance_booking": "08b04031",
+  "view_maintenance_history": "1b98709b",
+  "list_maintenance_booking": "2fa84f1b",
+  "edit_maintenance_history": "31788011",
+  "add_maintenance_history": "44ce1e31",
+  "list_maintenance_history": "54b90416",
+  "view_maintenance_booking": "a79d7975",
+  "add_maintenance_booking": "d4b3365b",
+  "delete_maintenance_booking": "e4c4d774",
+  "delete_maintenance_history": "f5351a70"
 }
