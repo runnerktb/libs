@@ -218,5 +218,7 @@
   "view_maintenance_booking": "a79d7975",
   "add_maintenance_booking": "d4b3365b",
   "delete_maintenance_booking": "e4c4d774",
-  "delete_maintenance_history": "f5351a70"
+  "delete_maintenance_history": "f5351a70",
+  "view_vehicle_list_fuel": "6lPnMwXX",
+  "download_fuel_information": "JikjNgTb"
 }
