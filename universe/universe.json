@@ -221,5 +221,8 @@
   "delete_maintenance_history": "f5351a70",
   "view_vehicle_list_fuel": "6lPnMwXX",
   "download_fuel_information": "JikjNgTb",
-  "view_consumption_fuel": "LSppf6hL"
+  "view_consumption_fuel": "LSppf6hL",
+  "add_report_vehicle_activation": "73be1d93",
+  "list_production_monitoring": "8ec3a700",
+  "view_report_vehicle_activation":  "934d3399"
 }
