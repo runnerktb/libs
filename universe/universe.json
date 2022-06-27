@@ -224,5 +224,6 @@
   "view_consumption_fuel": "LSppf6hL",
   "add_report_vehicle_activation": "73be1d93",
   "list_production_monitoring": "8ec3a700",
-  "view_report_vehicle_activation":  "934d3399"
+  "view_report_vehicle_activation":  "934d3399",
+  "list_driving_behaviour": "1f06347f"
 }
