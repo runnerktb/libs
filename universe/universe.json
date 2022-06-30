@@ -227,5 +227,9 @@
   "view_report_vehicle_activation": "934d3399",
   "list_driving_behaviour": "1f06347f",
   "change_status_vehicle_activation": "e63ef2b5",
-  "view_status_vehicle_activation": "0cd421c7"
+  "view_status_vehicle_activation": "0cd421c7",
+  "download_report_summary": "41c19723",
+  "list_by_eventtype_report_event": "79c2e942",
+  "list_report_summary": "d26ce4f5",
+  "list_report_top_mileage": "f24276f4"
 }
