@@ -234,5 +234,7 @@
   "list_report_top_mileage": "f24276f4",
   "download_vehicle_history": "b5eb68da",
   "list_customer_vehicle_dealer": "b4a17d58",
-  "registration_vehicle_activation": "c4aa3c10"
+  "registration_vehicle_activation": "c4aa3c10",
+  "list_vehicle_leasing": "175fa385",
+  "list_user_leasing": "0f5b79a1"
 }
