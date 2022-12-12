@@ -236,5 +236,13 @@
   "list_customer_vehicle_dealer": "b4a17d58",
   "registration_vehicle_activation": "c4aa3c10",
   "list_vehicle_leasing": "175fa385",
-  "list_user_leasing": "0f5b79a1"
+  "list_user_leasing": "0f5b79a1",
+  "edit_vehicle_leasing": "66489456",
+  "view_vehicle_leasing": "6dd89142",
+  "view_vehicle_group_leasing": "7bb16d5c",
+  "delete_vehicle_group_leasing": "80cf9d03",
+  "list_vehicle_group_leasing": "a8f22ffd",
+  "edit_vehicle_group_leasing": "ba77f116",
+  "view_count_vehicle_leasing": "fa8977bc",
+  "add_vehicle_group_leasing": "faccffcc"
 }
