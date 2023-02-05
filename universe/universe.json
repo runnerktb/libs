@@ -244,5 +244,12 @@
   "list_vehicle_group_leasing": "a8f22ffd",
   "edit_vehicle_group_leasing": "ba77f116",
   "view_count_vehicle_leasing": "fa8977bc",
-  "add_vehicle_group_leasing": "faccffcc"
+  "add_vehicle_group_leasing": "faccffcc",
+  "count_notif_abnormal": "2nqn0LX1",
+  "download_notif_abnormal": "2nqn0LX2",
+  "report_call_center": "2nqn0LX3",
+  "dismiss_notification": "2nqn0LX4",
+  "detail_notification": "2nqn0LX5",
+  "notification_setting": "2nqn0LX6",
+  "list_notification": "2nqn0LX7"
 }
