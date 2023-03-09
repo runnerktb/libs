@@ -251,5 +251,11 @@
   "dismiss_notification": "2nqn0LX4",
   "detail_notification": "2nqn0LX5",
   "notification_setting": "2nqn0LX6",
-  "list_notification": "2nqn0LX7"
+  "list_notification": "2nqn0LX7",
+  "add_announcement": "Y4u4BOPm",
+  "edit_announcement": "NTKQIJny",
+  "list_announcement": "hI4mmgHp",
+  "view_announcement": "RafDoeff",
+  "add_edit_disclaimer_activation": "5z61jHNH",
+  "get_disclaimer_activation": "XdNrJGdP"
 }
