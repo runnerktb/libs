@@ -6,11 +6,22 @@ import (
 	"github.com/dgrijalva/jwt-go"
 	"github.com/uzzeet/uzzeet-gateway/libs/helper"
 	"github.com/uzzeet/uzzeet-gateway/libs/helper/serror"
+	"io/ioutil"
 	"strings"
 )
 
 func ClaimToken(tokens []string) (response AuthorizationInfo, serr serror.SError) {
-	secretKey := []byte("um_super_apps")
+	//secretKey := []byte("um_super_apps")
+	publicKeyFile := "public_key.pem"
+	publicKeyBytes, err := ioutil.ReadFile(publicKeyFile)
+	if err != nil {
+		return response, serror.New("Public key tidak ditemukan")
+	}
+
+	publicKey, err := jwt.ParseRSAPublicKeyFromPEM(publicKeyBytes)
+	if err != nil {
+		return response, serror.NewFromError(err)
+	}
 
 	if tokens == nil {
 		return response, serror.New("Token tidak ditemukan")
@@ -21,10 +32,7 @@ func ClaimToken(tokens []string) (response AuthorizationInfo, serr serror.SError
 		return response, serror.NewFromError(err)
 	}
 	decode, err := jwt.Parse(tokenString, func(token *jwt.Token) (interface{}, error) {
-		if jwt.GetSigningMethod("HS256") != token.Method {
-			return nil, serror.NewFromError(fmt.Errorf("Unexpected signing method: %v", token.Header["alg"]))
-		}
-		return []byte(secretKey), nil
+		return publicKey, nil
 	})
 
 	if err != nil {
