@@ -281,5 +281,10 @@
   "list_trip_counter": "jawAIBZF",
   "download_productivity_analysis": "fx2C0D54",
   "list_productivity_analysis": "l9G5C4CD",
-  "report_geoevent": "521ckTj1"
+  "report_geoevent": "521ckTj1",
+  "add_custom_notification": "Tc7mBkPY",
+  "edit_custom_notification": "GO7aCmhc",
+  "list_custom_notification": "KXvHsSVu",
+  "view_custom_notification": "OHDecfjV",
+  "delete_custom_notification": "z64PQSxy"
 }
