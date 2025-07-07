@@ -3,11 +3,14 @@ package token
 import (
 	"errors"
 	"fmt"
-	"github.com/dgrijalva/jwt-go"
-	"github.com/uzzeet/uzzeet-gateway/libs/helper"
-	"github.com/uzzeet/uzzeet-gateway/libs/helper/serror"
 	"io/ioutil"
 	"strings"
+
+	"github.com/dgrijalva/jwt-go"
+	"github.com/runnerktb/libs/universe"
+	"github.com/uzzeet/uzzeet-gateway/libs/helper"
+	"github.com/uzzeet/uzzeet-gateway/libs/helper/serror"
+	lib "github.com/runnerktb/libs/helper"
 )
 
 func ClaimToken(tokens []string) (response AuthorizationInfo, serr serror.SError) {
@@ -118,4 +121,19 @@ func parseToken(source string) (token string, err error) {
 
 	token = tokens[valueSection]
 	return token, nil
+}
+
+func HasAccess(module string, userAccess []string) (isHas bool, serr serror.SError) {
+	acc := universe.ParseModule(module)
+	if acc.ID == "" {
+		serr = serror.New(fmt.Sprintf("module %s not found", module))
+		return false, serr
+	}
+
+	if lib.CheckArrayString(acc.ID, userAccess) {
+		return true, nil
+	}
+
+	serr = serror.New("Token module denied")
+	return false, serr
 }
