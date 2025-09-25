@@ -54,6 +54,7 @@ func ClaimToken(tokens []string) (response AuthorizationInfo, serr serror.SError
 			Name:           fmt.Sprintf("%v", resToken["name"]),
 			RealmID:        fmt.Sprintf("%v", resToken["realm_id"]),
 			UserAccess:     tmpUserAccess,
+			Jti:            fmt.Sprintf("%v", resToken["jti"]),
 		}
 		return response, nil
 	} else {
@@ -96,6 +97,7 @@ func ClaimToken(tokens []string) (response AuthorizationInfo, serr serror.SError
 			Name:           fmt.Sprintf("%v", resToken["name"]),
 			RealmID:        fmt.Sprintf("%v", resToken["realm_id"]),
 			UserAccess:     tmpUserAccess,
+			Jti:            fmt.Sprintf("%v", resToken["jti"]),
 		}
 		return response, nil
 	}
