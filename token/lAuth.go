@@ -20,6 +20,7 @@ type AuthorizationInfo struct {
 	RealmID        string   `json:"realm_id"`
 	UserAccess     []string `json:"user_access"`
 	Jti            string   `json:"jti"`
+	Sid            string   `json:"sid"`
 }
 
 func (a *AuthorizationInfo) IsRoot() bool {
